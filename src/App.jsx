@@ -7,6 +7,19 @@ function App() {
   const [suggestion, setSuggestion] = useState([]);
   const [selected, setSelected] = useState([])
   const [selectedSet, setSelectedSet] = useState(new Set())
+  // const [changeColor, setChangeColor] = useState("#ccc")
+  // const yesNo = useState(false);
+  // let color = "#ccc";
+
+
+  // const click = changeColor => {
+  //   yesNo ? color = "#dada" : color = "#ccc";
+  // }
+  
+
+  // useEffect(() => {
+  //   document.body.style.backgroundColor = changeColor;
+  // },[changeColor])
 
   const inputRef = useRef(null);
 
@@ -62,7 +75,8 @@ function App() {
   console.log(selected);
 
   return (
-    <div className='user-search-container'>
+<div className='main-body'>
+<div className='user-search-container'>
       <div className="user-search-input">
         {/* pills */}
 
@@ -105,7 +119,10 @@ function App() {
               ) : <></>
             })}
           </ul>
+          
+          {/* <button id="light-dark-btn" onClick={() => {(!yesNo)}}>Dark</button> */}
     </div>
+</div>
   )
 }
 
